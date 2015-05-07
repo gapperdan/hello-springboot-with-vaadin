@@ -1,6 +1,5 @@
 package com.gapperdan.hellovaadin.ui;
 
-import com.gapperdan.hellovaadin.bean.Greeter;
 import com.gapperdan.hellovaadin.view.UIScopedView;
 import com.gapperdan.hellovaadin.view.ViewScopedView;
 import com.vaadin.annotations.Theme;
@@ -17,14 +16,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 public class MyVaadinUI extends UI {
 
     @Autowired
-    private Greeter greeter;
-
-    @Autowired
     private SpringViewProvider viewProvider;
 
     @Override
     protected void init(VaadinRequest vaadinRequest) {
-        //setContent(new Label(greeter.sayHello()));
 
         final VerticalLayout root = new VerticalLayout();
         root.setSizeFull();
