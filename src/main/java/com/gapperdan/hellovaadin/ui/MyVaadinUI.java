@@ -47,7 +47,8 @@ public class MyVaadinUI extends UI {
     private Button createNavigationButton(String caption, final String viewName) {
         Button button = new Button(caption);
         button.addStyleName(ValoTheme.BUTTON_SMALL);
-        // If you didn't choose Java 8 when creating the project, convert this to an anonymous listener class
+        button.addStyleName(ValoTheme.BUTTON_PRIMARY);
+
         button.addClickListener(new Button.ClickListener() {
             @Override
             public void buttonClick(Button.ClickEvent event) {
